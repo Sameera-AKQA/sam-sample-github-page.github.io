@@ -1,0 +1,326 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Enhanced Flashlight Report - With Cucumber Steps</title><link rel="icon" href="https://app.flashlight.dev/favicon.ico"><link rel="stylesheet" href="https://use.typekit.net/onj4oqg.css"></head><body> <style>*,:before,:after{box-sizing:border-box;border:0 solid #e5e7eb}:before,:after{--tw-content:""}html,:host{-webkit-text-size-adjust:100%;tab-size:4;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent;font-family:Inter,ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}body{line-height:inherit;margin:0}hr{color:inherit;border-top-width:1px;height:0}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;-webkit-text-decoration:inherit;-webkit-text-decoration:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-feature-settings:normal;font-variation-settings:normal;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-size:1em}small{font-size:80%}sub,sup{vertical-align:baseline;font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-feature-settings:inherit;font-variation-settings:inherit;font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,[type=button],[type=reset],[type=submit]{-webkit-appearance:button;background-color:#0000;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button{height:auto}::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dl,dd,h1,h2,h3,h4,h5,h6,hr,figure,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}ol,ul,menu{margin:0;padding:0;list-style:none}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder{opacity:1;color:#9ca3af}textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}button,[role=button]{cursor:pointer}:disabled{cursor:default}img,svg,video,canvas,audio,iframe,embed,object{vertical-align:middle;display:block}img,video{max-width:100%;height:auto}[hidden]{display:none}html{--bright-yellow:#fff500;--bright-green:#00ff75;--bright-magenta:#ff36af;--bright-cyan:#0ff;--bright-yellow-rgb:255,245,0;--bright-green-rgb:0,255,117;--bright-magenta-rgb:255,54,175;--bright-cyan-rgb:0,255,255}[data-theme=bright-yellow]{--theme-color:#fff500;--theme-color-100:#fff50021}[data-theme=bright-green]{--theme-color:#00ff75;--theme-color-100:#00ff7521}[data-theme=bright-magenta]{--theme-color:#ff36af;--theme-color-100:#ff36af21}[data-theme=bright-cyan]{--theme-color:#0ff;--theme-color-100:#00ffff21}*,:before,:after,::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:#3b82f680;--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.sr-only{clip:rect(0,0,0,0);white-space:nowrap;border-width:0;width:1px;height:1px;margin:-1px;padding:0;position:absolute;overflow:hidden}.static{position:static}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0}.bottom-0{bottom:0}.left-0{left:0}.right-0{right:0}.top-0{top:0}.-z-10{z-index:-10}.z-50{z-index:50}.m-1{margin:.25rem}.mx-8{margin-left:2rem;margin-right:2rem}.mb-2{margin-bottom:.5rem}.mb-\[5px\]{margin-bottom:5px}.ml-2{margin-left:.5rem}.ml-\[10px\]{margin-left:10px}.ml-auto{margin-left:auto}.mr-1{margin-right:.25rem}.mr-2{margin-right:.5rem}.mr-3{margin-right:.75rem}.mr-auto{margin-right:auto}.line-clamp-1{-webkit-line-clamp:1;-webkit-box-orient:vertical;display:-webkit-box;overflow:hidden}.flex{display:flex}.inline-flex{display:inline-flex}.table{display:table}.grid{display:grid}.h-10{height:2.5rem}.h-16{height:4rem}.h-2{height:.5rem}.h-6{height:1.5rem}.h-8{height:2rem}.h-\[calc\(100\%-50px\)\]{height:calc(100% - 50px)}.h-full{height:100%}.max-h-\[600px\]{max-height:600px}.min-h-\[12px\]{min-height:12px}.w-11{width:2.75rem}.w-2{width:.5rem}.w-4{width:1rem}.w-\[12px\]{width:12px}.w-\[456px\]{width:456px}.w-\[500px\]{width:500px}.w-full{width:100%}.min-w-\[12px\]{min-width:12px}.max-w-\[24px\]{max-width:24px}.max-w-\[50vw\]{max-width:50vw}.flex-1{flex:1}.flex-shrink-0{flex-shrink:0}.grow{flex-grow:1}.-rotate-90{--tw-rotate:-90deg;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.rotate-0{--tw-rotate:0deg;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.rotate-180{--tw-rotate:180deg;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.rotate-90{--tw-rotate:90deg;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.cursor-default{cursor:default}.cursor-pointer{cursor:pointer}.flex-row{flex-direction:row}.flex-col{flex-direction:column}.flex-nowrap{flex-wrap:nowrap}.items-center{align-items:center}.justify-center{justify-content:center}.gap-12{gap:3rem}.gap-2{gap:.5rem}.gap-4{gap:1rem}.self-center{align-self:center}.overflow-auto{overflow:auto}.overflow-hidden{overflow:hidden}.overflow-scroll{overflow:scroll}.overflow-y-hidden{overflow-y:hidden}.overflow-x-scroll{overflow-x:scroll}.truncate{text-overflow:ellipsis;white-space:nowrap;overflow:hidden}.whitespace-pre{white-space:pre}.rounded{border-radius:.25rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.border{border-width:1px}.border-gray-800{--tw-border-opacity:1;border-color:rgb(31 41 55/var(--tw-border-opacity))}.border-b-neutral-500{--tw-border-opacity:1;border-bottom-color:rgb(115 115 115/var(--tw-border-opacity))}.\!bg-dark-charcoal{--tw-bg-opacity:1!important;background-color:rgb(19 19 19/var(--tw-bg-opacity))!important}.bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0/var(--tw-bg-opacity))}.bg-dark-charcoal{--tw-bg-opacity:1;background-color:rgb(19 19 19/var(--tw-bg-opacity))}.bg-gray-200{--tw-bg-opacity:1;background-color:rgb(229 231 235/var(--tw-bg-opacity))}.bg-light-charcoal{--tw-bg-opacity:1;background-color:rgb(27 27 29/var(--tw-bg-opacity))}.bg-theme-color{background-color:var(--theme-color)}.bg-gradient-radial{background-image:radial-gradient(57.7% 57.7% at 50% 0%,var(--theme-color-100)0%,#1d1d1f00 100%)}.fill-white{fill:#fff}.stroke-error{stroke:#e62e2e}.stroke-success{stroke:#158000}.stroke-warning{stroke:#e67f17}.stroke-white{stroke:#fff}.p-6{padding:1.5rem}.px-10{padding-left:2.5rem;padding-right:2.5rem}.px-12{padding-left:3rem;padding-right:3rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pr-6{padding-right:1.5rem}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-6xl{font-size:3.75rem;line-height:1}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-medium{font-weight:500}.font-semibold{font-weight:600}.\!text-neutral-300{--tw-text-opacity:1!important;color:rgb(212 212 212/var(--tw-text-opacity))!important}.text-\[\#8B8B8B\]{--tw-text-opacity:1;color:rgb(139 139 139/var(--tw-text-opacity))}.text-black{--tw-text-opacity:1;color:rgb(0 0 0/var(--tw-text-opacity))}.text-green-500{--tw-text-opacity:1;color:rgb(34 197 94/var(--tw-text-opacity))}.text-neutral-200{--tw-text-opacity:1;color:rgb(229 229 229/var(--tw-text-opacity))}.text-neutral-300{--tw-text-opacity:1;color:rgb(212 212 212/var(--tw-text-opacity))}.text-neutral-400{--tw-text-opacity:1;color:rgb(163 163 163/var(--tw-text-opacity))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68/var(--tw-text-opacity))}.text-theme-color{color:var(--theme-color)}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity))}.opacity-30{opacity:.3}.shadow-glow{--tw-shadow:0 0 10px 0 var(--theme-color);--tw-shadow-colored:0 0 10px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px #0000001a,0 4px 6px -4px #0000001a;--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-theme-color{--tw-shadow-color:var(--theme-color);--tw-shadow:var(--tw-shadow-colored)}.filter{filter:var(--tw-blur)var(--tw-brightness)var(--tw-contrast)var(--tw-grayscale)var(--tw-hue-rotate)var(--tw-invert)var(--tw-saturate)var(--tw-sepia)var(--tw-drop-shadow)}.transition-\[height\]{transition-property:height;transition-duration:.15s;transition-timing-function:cubic-bezier(.4,0,.2,1)}.transition-\[max-width\]{transition-property:max-width;transition-duration:.15s;transition-timing-function:cubic-bezier(.4,0,.2,1)}.transition-transform{transition-property:transform;transition-duration:.15s;transition-timing-function:cubic-bezier(.4,0,.2,1)}.duration-300{transition-duration:.3s}.ease-linear{transition-timing-function:linear}.hide-scrollbar{scrollbar-width:none;-ms-overflow-style:none}.hide-scrollbar::-webkit-scrollbar{display:none}.line-clamp-1{-webkit-line-clamp:1;word-break:break-all;-webkit-box-orient:vertical;display:-webkit-box;overflow:hidden}.after\:absolute:after{content:var(--tw-content);position:absolute}.after\:left-\[2px\]:after{content:var(--tw-content);left:2px}.after\:top-0:after{content:var(--tw-content);top:0}.after\:top-0\.5:after{content:var(--tw-content);top:.125rem}.after\:h-5:after{content:var(--tw-content);height:1.25rem}.after\:w-5:after{content:var(--tw-content);width:1.25rem}.after\:rounded-full:after{content:var(--tw-content);border-radius:9999px}.after\:border:after{content:var(--tw-content);border-width:1px}.after\:border-gray-300:after{content:var(--tw-content);--tw-border-opacity:1;border-color:rgb(209 213 219/var(--tw-border-opacity))}.after\:bg-white:after{content:var(--tw-content);--tw-bg-opacity:1;background-color:rgb(255 255 255/var(--tw-bg-opacity))}.after\:transition-all:after{content:var(--tw-content);transition-property:all;transition-duration:.15s;transition-timing-function:cubic-bezier(.4,0,.2,1)}.after\:content-\[\'\'\]:after{--tw-content:"";content:var(--tw-content)}.peer:checked~.peer-checked\:bg-theme-color{background-color:var(--theme-color)}.peer:checked~.peer-checked\:after\:translate-x-full:after{content:var(--tw-content);--tw-translate-x:100%;transform:translate(var(--tw-translate-x),var(--tw-translate-y))rotate(var(--tw-rotate))skewX(var(--tw-skew-x))skewY(var(--tw-skew-y))scaleX(var(--tw-scale-x))scaleY(var(--tw-scale-y))}.peer:checked~.peer-checked\:after\:border-white:after{content:var(--tw-content);--tw-border-opacity:1;border-color:rgb(255 255 255/var(--tw-border-opacity))}@media (prefers-color-scheme:dark){.dark\:border-gray-600{--tw-border-opacity:1;border-color:rgb(75 85 99/var(--tw-border-opacity))}.dark\:bg-gray-700{--tw-bg-opacity:1;background-color:rgb(55 65 81/var(--tw-bg-opacity))}}html,body,#app{width:100%;height:100%}body{--tw-bg-opacity:1;background-color:rgb(27 27 29/var(--tw-bg-opacity))}</style> <div id="app"></div> <script  src="report.js"></script> 
+<script>
+(function() {
+    console.log('🔦 Enhanced Flashlight Report - Injecting Cucumber Steps...');
+
+    const stepData = {"testStartTime":1756181239412,"testEndTime":1756181284826.7107,"totalDuration":45414.710695173024,"steps":[{"text":"Given I launch the mobile app","featureUri":"Performance test.feature","scenarioName":"E2E performance test","startTime":1756181239412,"endTime":1756181243030.0615,"relativeStartTime":0,"relativeEndTime":3618.0615671939577,"duration":3618.0615671939577,"status":"passed"},{"text":"Given I am on Create Account page","featureUri":"Performance test.feature","scenarioName":"E2E performance test","startTime":1756181243030.0615,"endTime":1756181246189.5903,"relativeStartTime":3618.0615671939577,"relativeEndTime":6777.59036983584,"duration":3159.5288026418825,"status":"passed"},{"text":"When I enter the following information for registration:","featureUri":"Performance test.feature","scenarioName":"E2E performance test","startTime":1756181246189.5903,"endTime":1756181248844.709,"relativeStartTime":6777.59036983584,"relativeEndTime":9432.709081758283,"duration":2655.1187119224433,"status":"passed"},{"text":"Then I click on I agree to the Rewards Program terms and conditions and privacy policy","featureUri":"Performance test.feature","scenarioName":"E2E performance test","startTime":1756181248844.709,"endTime":1756181251894.1511,"relativeStartTime":9432.709081758283,"relativeEndTime":12482.151195971772,"duration":3049.442114213488,"status":"passed"},{"text":"Then I tap \"Join Now\" on Create Account Screen","featureUri":"Performance test.feature","scenarioName":"E2E performance test","startTime":1756181251894.1511,"endTime":1756181255868.713,"relativeStartTime":12482.151195971772,"relativeEndTime":16456.71292561813,"duration":3974.561729646355,"status":"passed"},{"text":"And I click on Sign out button","featureUri":"Performance test.feature","scenarioName":"E2E performance test","startTime":1756181255868.713,"endTime":1756181258246.084,"relativeStartTime":16456.71292561813,"relativeEndTime":18834.084067915905,"duration":2377.371142297776,"status":"passed"},{"text":"And I click on the Sign in button","featureUri":"Performance test.feature","scenarioName":"E2E performance test","startTime":1756181258246.084,"endTime":1756181261162.6326,"relativeStartTime":18834.084067915905,"relativeEndTime":21750.632492908626,"duration":2916.5484249927226,"status":"passed"},{"text":"And I log in to the application with valid credentials as \"Secondary User\"","featureUri":"Performance test.feature","scenarioName":"E2E performance test","startTime":1756181261162.6326,"endTime":1756181263994.9888,"relativeStartTime":21750.632492908626,"relativeEndTime":24582.988751750752,"duration":2832.3562588421278,"status":"passed"},{"text":"And I search for a product \"common-product\"","featureUri":"Performance test.feature","scenarioName":"E2E performance test","startTime":1756181263994.9888,"endTime":1756181266048.293,"relativeStartTime":24582.988751750752,"relativeEndTime":26636.292970472216,"duration":2053.3042187214633,"status":"passed"},{"text":"And I select Low to High sort option","featureUri":"Performance test.feature","scenarioName":"E2E performance test","startTime":1756181266048.293,"endTime":1756181269018.6692,"relativeStartTime":26636.292970472216,"relativeEndTime":29606.66923889965,"duration":2970.3762684274348,"status":"passed"},{"text":"And I select Recommended sort option","featureUri":"Performance test.feature","scenarioName":"E2E performance test","startTime":1756181269018.6692,"endTime":1756181272818.4333,"relativeStartTime":29606.66923889965,"relativeEndTime":33406.43330278357,"duration":3799.7640638839166,"status":"passed"},{"text":"And I tap on the product name \"common-product\"","featureUri":"Performance test.feature","scenarioName":"E2E performance test","startTime":1756181272818.4333,"endTime":1756181275925.6104,"relativeStartTime":33406.43330278357,"relativeEndTime":36513.61034412483,"duration":3107.1770413412623,"status":"passed"},{"text":"And I select Item size and click on Add to Cart button","featureUri":"Performance test.feature","scenarioName":"E2E performance test","startTime":1756181275925.6104,"endTime":1756181279344.7937,"relativeStartTime":36513.61034412483,"relativeEndTime":39932.79380540655,"duration":3419.1834612817256,"status":"passed"},{"text":"And I search for a product \"FIS-search-product\"","featureUri":"Performance test.feature","scenarioName":"E2E performance test","startTime":1756181279344.7937,"endTime":1756181281970.862,"relativeStartTime":39932.79380540655,"relativeEndTime":42558.86201768463,"duration":2626.0682122780763,"status":"passed"},{"text":"And I tap on the product name \"FIS-search-product\"","featureUri":"Performance test.feature","scenarioName":"E2E performance test","startTime":1756181281970.862,"endTime":1756181284826.7107,"relativeStartTime":42558.86201768463,"relativeEndTime":45414.710695173024,"duration":2855.8486774883913,"status":"passed"}],"metadata":{"capturedAt":"2025-08-26T04:07:19.412Z","stepCount":15,"longestStep":{"text":"Then I tap \"Join Now\" on Create Account Screen","featureUri":"Performance test.feature","scenarioName":"E2E performance test","startTime":1756181251894.1511,"endTime":1756181255868.713,"relativeStartTime":12482.151195971772,"relativeEndTime":16456.71292561813,"duration":3974.561729646355,"status":"passed"},"source":"feature-file-mock","note":"This is mock timing data generated from .feature file. For real timing data, use WebDriverIO hooks during test execution."}};
+    const stepAnnotations = [{"x":0,"x2":3618.0615671939577,"borderColor":"#22c55e","fillColor":"#22c55e","opacity":0.2,"strokeDashArray":0,"label":{"borderColor":"#22c55e","style":{"color":"#fff","background":"#22c55e","fontSize":"10px","fontWeight":"bold"},"text":"1","position":"top"}},{"x":3618.0615671939577,"x2":6777.59036983584,"borderColor":"#22c55e","fillColor":"#22c55e","opacity":0.2,"strokeDashArray":0,"label":{"borderColor":"#22c55e","style":{"color":"#fff","background":"#22c55e","fontSize":"10px","fontWeight":"bold"},"text":"2","position":"top"}},{"x":6777.59036983584,"x2":9432.709081758283,"borderColor":"#22c55e","fillColor":"#22c55e","opacity":0.2,"strokeDashArray":0,"label":{"borderColor":"#22c55e","style":{"color":"#fff","background":"#22c55e","fontSize":"10px","fontWeight":"bold"},"text":"3","position":"top"}},{"x":9432.709081758283,"x2":12482.151195971772,"borderColor":"#22c55e","fillColor":"#22c55e","opacity":0.2,"strokeDashArray":0,"label":{"borderColor":"#22c55e","style":{"color":"#fff","background":"#22c55e","fontSize":"10px","fontWeight":"bold"},"text":"4","position":"top"}},{"x":12482.151195971772,"x2":16456.71292561813,"borderColor":"#22c55e","fillColor":"#22c55e","opacity":0.2,"strokeDashArray":0,"label":{"borderColor":"#22c55e","style":{"color":"#fff","background":"#22c55e","fontSize":"10px","fontWeight":"bold"},"text":"5","position":"top"}},{"x":16456.71292561813,"x2":18834.084067915905,"borderColor":"#22c55e","fillColor":"#22c55e","opacity":0.2,"strokeDashArray":0,"label":{"borderColor":"#22c55e","style":{"color":"#fff","background":"#22c55e","fontSize":"10px","fontWeight":"bold"},"text":"6","position":"top"}},{"x":18834.084067915905,"x2":21750.632492908626,"borderColor":"#22c55e","fillColor":"#22c55e","opacity":0.2,"strokeDashArray":0,"label":{"borderColor":"#22c55e","style":{"color":"#fff","background":"#22c55e","fontSize":"10px","fontWeight":"bold"},"text":"7","position":"top"}},{"x":21750.632492908626,"x2":24582.988751750752,"borderColor":"#22c55e","fillColor":"#22c55e","opacity":0.2,"strokeDashArray":0,"label":{"borderColor":"#22c55e","style":{"color":"#fff","background":"#22c55e","fontSize":"10px","fontWeight":"bold"},"text":"8","position":"top"}},{"x":24582.988751750752,"x2":26636.292970472216,"borderColor":"#22c55e","fillColor":"#22c55e","opacity":0.2,"strokeDashArray":0,"label":{"borderColor":"#22c55e","style":{"color":"#fff","background":"#22c55e","fontSize":"10px","fontWeight":"bold"},"text":"9","position":"top"}},{"x":26636.292970472216,"x2":29606.66923889965,"borderColor":"#22c55e","fillColor":"#22c55e","opacity":0.2,"strokeDashArray":0,"label":{"borderColor":"#22c55e","style":{"color":"#fff","background":"#22c55e","fontSize":"10px","fontWeight":"bold"},"text":"10","position":"top"}},{"x":29606.66923889965,"x2":33406.43330278357,"borderColor":"#22c55e","fillColor":"#22c55e","opacity":0.2,"strokeDashArray":0,"label":{"borderColor":"#22c55e","style":{"color":"#fff","background":"#22c55e","fontSize":"10px","fontWeight":"bold"},"text":"11","position":"top"}},{"x":33406.43330278357,"x2":36513.61034412483,"borderColor":"#22c55e","fillColor":"#22c55e","opacity":0.2,"strokeDashArray":0,"label":{"borderColor":"#22c55e","style":{"color":"#fff","background":"#22c55e","fontSize":"10px","fontWeight":"bold"},"text":"12","position":"top"}},{"x":36513.61034412483,"x2":39932.79380540655,"borderColor":"#22c55e","fillColor":"#22c55e","opacity":0.2,"strokeDashArray":0,"label":{"borderColor":"#22c55e","style":{"color":"#fff","background":"#22c55e","fontSize":"10px","fontWeight":"bold"},"text":"13","position":"top"}},{"x":39932.79380540655,"x2":42558.86201768463,"borderColor":"#22c55e","fillColor":"#22c55e","opacity":0.2,"strokeDashArray":0,"label":{"borderColor":"#22c55e","style":{"color":"#fff","background":"#22c55e","fontSize":"10px","fontWeight":"bold"},"text":"14","position":"top"}},{"x":42558.86201768463,"x2":45414.710695173024,"borderColor":"#22c55e","fillColor":"#22c55e","opacity":0.2,"strokeDashArray":0,"label":{"borderColor":"#22c55e","style":{"color":"#fff","background":"#22c55e","fontSize":"10px","fontWeight":"bold"},"text":"15","position":"top"}}];
+    const hasSteps = true;
+
+    // Function to inject step summary
+    function injectStepSummary() {
+        if (!hasSteps) {
+            console.log('📊 No step data available for enhancement');
+            return;
+        }
+
+        const steps = stepData.steps;
+        const passedSteps = steps.filter((s) => s.status === 'passed').length;
+        const failedSteps = steps.filter((s) => s.status === 'failed').length;
+        const totalSteps = steps.length;
+        const successRate = ((passedSteps / totalSteps) * 100).toFixed(1);
+
+        // Calculate timing metrics
+        const durations = steps.map((s) => s.duration || 0);
+        const totalDuration = durations.reduce((sum, d) => sum + d, 0);
+        const averageDuration = totalDuration / totalSteps;
+
+        // Create step summary card
+        const summaryHtml = `
+            <div style="
+                background: #2d2d2d;
+                border: 1px solid #404040;
+                border-radius: 8px;
+                padding: 20px;
+                margin: 20px 0;
+                color: white;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            ">
+                <h3 style="margin-top: 0; color: #60a5fa; display: flex; align-items: center; font-size: 18px;">
+                     Cucumber Steps Summary
+                </h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-bottom: 20px;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 24px; font-weight: bold; color: #22c55e;">${passedSteps}</div>
+                        <div style="font-size: 14px; color: #9ca3af;">Passed</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 24px; font-weight: bold; color: #ef4444;">${failedSteps}</div>
+                        <div style="font-size: 14px; color: #9ca3af;">Failed</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 24px; font-weight: bold; color: #60a5fa;">${totalSteps}</div>
+                        <div style="font-size: 14px; color: #9ca3af;">Total Steps</div>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 24px; font-weight: bold; color: #60a5fa;">${successRate}%</div>
+                        <div style="font-size: 14px; color: #9ca3af;">Success Rate</div>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-bottom: 20px; font-size: 14px;">
+                    <div>
+                        <span style="color: #9ca3af;">Total Duration:</span>
+                        <span style="color: #e5e7eb; margin-left: 8px; font-weight: bold;">${(totalDuration / 1000).toFixed(2)}s</span>
+                    </div>
+                    <div>
+                        <span style="color: #9ca3af;">Average Step:</span>
+                        <span style="color: #e5e7eb; margin-left: 8px; font-weight: bold;">${(averageDuration / 1000).toFixed(2)}s</span>
+                    </div>
+                </div>
+
+                <div style="padding-top: 15px; border-top: 1px solid #404040;">
+                    <div style="display: flex; flex-wrap: wrap; gap: 15px; font-size: 14px; align-items: center;">
+                        <span style="font-weight: bold; color: #e5e7eb;">Step Status Legend:</span>
+                        <div style="display: flex; align-items: center; gap: 6px;">
+                            <div style="width: 12px; height: 12px; background: #22c55e; border-radius: 2px;"></div>
+                            <span style="color: #d1d5db;">Passed</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 6px;">
+                            <div style="width: 12px; height: 12px; background: #ef4444; border-radius: 2px;"></div>
+                            <span style="color: #d1d5db;">Failed</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 6px;">
+                            <div style="width: 12px; height: 12px; background: #6b7280; border-radius: 2px;"></div>
+                            <span style="color: #d1d5db;">Skipped</span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 6px;">
+                            <div style="width: 12px; height: 12px; background: #f59e0b; border-radius: 2px;"></div>
+                            <span style="color: #d1d5db;">Pending</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        // Find the app container and inject the summary
+        const appContainer = document.querySelector('#app');
+        if (appContainer) {
+            // Wait a bit for React to render, then inject our content
+            setTimeout(() => {
+                const summaryDiv = document.createElement('div');
+                summaryDiv.innerHTML = summaryHtml;
+
+                // Try to insert after the header/summary section
+                const existingSummary = appContainer.querySelector('[class*="summary"], [class*="header"]') ||
+                                       appContainer.firstElementChild;
+
+                if (existingSummary && existingSummary.nextSibling) {
+                    existingSummary.parentNode.insertBefore(summaryDiv, existingSummary.nextSibling);
+                } else if (existingSummary) {
+                    appContainer.insertBefore(summaryDiv, existingSummary.nextSibling || appContainer.firstChild);
+                } else {
+                    appContainer.appendChild(summaryDiv);
+                }
+
+                console.log('✅ Cucumber steps summary injected');
+            }, 1000);
+        }
+    }
+
+        // Function to add hover overlay for step information
+    function addHoverOverlay() {
+        console.log('🔧 Setting up hover overlay system...');
+
+        // Create tooltip element
+        const tooltip = document.createElement('div');
+        tooltip.id = 'step-tooltip';
+        tooltip.style.cssText = `
+            position: fixed;
+            background: #1f2937;
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            font-size: 12px;
+            line-height: 1.4;
+            pointer-events: none;
+            z-index: 10000;
+            display: none;
+            max-width: 300px;
+            border: 1px solid #374151;
+        `;
+        document.body.appendChild(tooltip);
+        console.log('✅ Tooltip element created');
+
+        // Function to add hover to a specific chart area
+        function attachHoverToChart(chartElement) {
+            console.log('🎯 Attaching hover to chart element:', chartElement);
+
+            chartElement.addEventListener('mousemove', (e) => {
+                const rect = chartElement.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+
+                // Convert pixel position to data coordinates (approximate)
+                const chartWidth = rect.width;
+                const timeRange = stepData.totalDuration;
+                const timeAtCursor = (x / chartWidth) * timeRange;
+
+                // Find current step
+                const currentStep = stepData.steps.find(step =>
+                    timeAtCursor >= step.relativeStartTime && timeAtCursor <= step.relativeEndTime
+                );
+
+                if (currentStep) {
+                    const stepNumber = stepData.steps.indexOf(currentStep) + 1;
+                    tooltip.innerHTML = `
+                        <div style="border-bottom: 1px solid #374151; padding-bottom: 8px; margin-bottom: 8px;">
+                            <strong>⏱️ Time: ${(timeAtCursor / 1000).toFixed(2)}s</strong>
+                        </div>
+                        <div style="background: #22c55e; padding: 8px; border-radius: 4px; margin-top: 4px;">
+                            <strong>🥒 Step #${stepNumber}</strong><br/>
+                            <div style="margin-top: 4px; font-weight: normal;">
+                                ${currentStep.text}
+                            </div>
+                            <div style="margin-top: 6px; font-size: 11px; opacity: 0.9;">
+                                Duration: ${(currentStep.duration / 1000).toFixed(2)}s | Status: ${currentStep.status}
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    tooltip.innerHTML = `
+                        <div>
+                            <strong>⏱️ Time: ${(timeAtCursor / 1000).toFixed(2)}s</strong><br/>
+                            <span style="color: #9ca3af;">No step active at this time</span>
+                        </div>
+                    `;
+                }
+
+                tooltip.style.display = 'block';
+                tooltip.style.left = (e.clientX + 15) + 'px';
+                tooltip.style.top = (e.clientY - 10) + 'px';
+            });
+
+            chartElement.addEventListener('mouseleave', () => {
+                tooltip.style.display = 'none';
+            });
+
+            console.log('✅ Hover events attached to chart element');
+        }
+
+        // Try multiple selectors to find chart elements
+        const selectors = [
+            '.apexcharts-canvas',
+            '.apexcharts-svg',
+            '[data-apexcharts-id]',
+            '.apexcharts-inner',
+            'svg'
+        ];
+
+        let chartsFound = 0;
+        selectors.forEach(selector => {
+            const elements = document.querySelectorAll(selector);
+            console.log(`🔍 Found ${elements.length} elements with selector: ${selector}`);
+
+            elements.forEach((element, index) => {
+                // Check if this looks like a chart element
+                if (element.closest('.apexcharts-canvas') ||
+                    element.classList.contains('apexcharts-canvas') ||
+                    element.getAttribute('data-apexcharts-id')) {
+                    attachHoverToChart(element);
+                    chartsFound++;
+                }
+            });
+        });
+
+        console.log(`📊 Total charts with hover attached: ${chartsFound}`);
+
+        // Fallback: attach to any SVG elements that might be charts
+        if (chartsFound === 0) {
+            console.log('🔄 No charts found with standard selectors, trying SVG fallback...');
+            const svgElements = document.querySelectorAll('svg');
+            svgElements.forEach((svg, index) => {
+                if (svg.getBoundingClientRect().width > 100) { // Likely a chart if wide enough
+                    console.log(`📈 Attaching to SVG #${index} (width: ${svg.getBoundingClientRect().width}px)`);
+                    attachHoverToChart(svg);
+                    chartsFound++;
+                }
+            });
+        }
+
+        return chartsFound;
+    }
+
+    // Function to enhance charts with step annotations
+    function enhanceCharts() {
+        if (!hasSteps || stepAnnotations.length === 0) {
+            console.log('📊 No step annotations to add to charts');
+            return;
+        }
+
+        console.log(`🎯 Adding ${stepAnnotations.length} step annotations to charts`);
+
+        // Wait for ApexCharts to be available and charts to be rendered
+        const checkForCharts = () => {
+            const canvasElements = document.querySelectorAll('.apexcharts-canvas');
+
+            if (typeof window.ApexCharts !== 'undefined' && canvasElements.length > 0) {
+                setTimeout(() => {
+                    // Find all ApexCharts instances and add annotations
+                    canvasElements.forEach((canvas, index) => {
+                        try {
+                            // Get the chart instance
+                            const chartElement = canvas.closest('[data-apexcharts-id]') || canvas.parentElement;
+
+                            if (chartElement && window.ApexCharts) {
+                                // Try to find and update the chart with annotations
+                                const apexCharts = window.ApexCharts;
+                                const charts = apexCharts.getChartByID ?
+                                    [apexCharts.getChartByID(chartElement.getAttribute('data-apexcharts-id'))] :
+                                    Object.values(apexCharts.charts || {});
+
+                                                                charts.forEach((chart) => {
+                                    if (chart && chart.updateOptions) {
+                                        chart.updateOptions({
+                                            annotations: {
+                                                xaxis: stepAnnotations
+                                            }
+                                        }, false, true);
+                                        console.log(`✅ Enhanced chart ${index + 1} with step annotations`);
+
+                                        // Add custom hover overlay for step information will be handled separately
+                                    }
+                                });
+                            }
+                        } catch (error) {
+                            console.log('⚠️ Could not enhance chart:', error.message || error);
+                        }
+                    });
+                }, 2000);
+            } else {
+                // Retry after a short delay
+                setTimeout(checkForCharts, 500);
+            }
+        };
+
+        checkForCharts();
+    }
+
+    // Wait for the page to load, then inject enhancements
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                injectStepSummary();
+                enhanceCharts();
+                // Set up hover overlay system with additional delay to ensure charts are rendered
+                setTimeout(() => {
+                    const chartsWithHover = addHoverOverlay();
+                    console.log(`🎯 Hover system setup complete. Charts with hover: ${chartsWithHover}`);
+                }, 2000);
+            }, 500);
+        });
+    } else {
+        setTimeout(() => {
+            injectStepSummary();
+            enhanceCharts();
+            // Set up hover overlay system with additional delay to ensure charts are rendered
+            setTimeout(() => {
+                const chartsWithHover = addHoverOverlay();
+                console.log(`🎯 Hover system setup complete. Charts with hover: ${chartsWithHover}`);
+            }, 2000);
+        }, 500);
+    }
+
+})();
+</script>
+</body></html>
